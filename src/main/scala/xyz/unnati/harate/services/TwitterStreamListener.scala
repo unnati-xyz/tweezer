@@ -24,13 +24,11 @@ object TwitterStreamListener extends Logging {
 
     def onStatus(status: Status) {
 
+      val timeStamp = status.getCreatedAt.getTime
       val tweetJson = TwitterObjectFactory.getRawJSON(status)
-      info(tweetJson)
-
       val doc = Document.parse(tweetJson)
-      val result = collection.insertOne(doc)
-
-      info(result)
+      doc.put("timestamp_ms", timeStamp)
+      collection.insertOne(doc)
     }
 
     def onDeletionNotice(statusDeletionNotice: StatusDeletionNotice) {}
