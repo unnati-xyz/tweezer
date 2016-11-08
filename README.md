@@ -98,7 +98,7 @@ $ sbt run
 ### Using the JAR directly
 
 If you have Java 7+ and mongodb 3 installed and do not want the docker setup,
-you can pickup the jar from [dropbox](https://www.dropbox.com/s/b5blvntei2gqlid/tweezer-0.1.0.jar?dl=1) 
+you can pickup the jar from [dropbox](https://www.dropbox.com/s/gau7688ftw18xci/tweezer-0.2.0.jar?dl=1) 
 and run tweezer. Make sure you configure the `application.conf` (here is a [sample](https://github.com/unnati-xyz/tweezer/blob/master/application.conf))
 and set an environment variable `HARATE_CONF` pointing to the location of the
 configuration file
@@ -110,6 +110,6 @@ export HARATE_CONF=/path/to/application.conf
 Once we have the path configured, we are ready to run the jar
 
 ```
-$ java -jar tweezer-0.1.0.jar
+$ java -jar tweezer-0.2.0.jar
 ```
 
